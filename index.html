@@ -3,19 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>👑 Inspire Love | Love Heart Animation</title>
+  <title>👑 INSPIRE | Love Heart Animation</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Queen Header - Side Mast Mode + Colorful Effect -->
-  <div class="queen-header">
-    <span class="crown">👑</span>
-    <h1 class="inspire-text">INSPIRE LOVE</h1>
-    <span class="crown">👑</span>
+
+  <!-- ========== SCREEN 1: Heart Animation ========== -->
+  <div id="screen1" class="screen active">
+    <div class="center-logo">
+      <img src="inspire-logo.jpg" alt="INSPIRE" class="inspire-center-logo">
+    </div>
+    <div id="ui"></div>
+    <button class="enter-btn" onclick="goToScreen(2)">Enter ✨</button>
   </div>
 
-  <!-- Heart Animation Container -->
-  <div id="ui"></div>
+  <!-- ========== SCREEN 2: Welcome Door ========== -->
+  <div id="screen2" class="screen">
+    <div class="welcome-content">
+      <div class="glow-heart">❤️</div>
+      <h1 class="welcome-title">
+        Welcome to <span>Inspire's</span><br>World
+      </h1>
+      <p class="welcome-roles">Developer • Creator • Dreamer</p>
+      <p class="welcome-quote">"Code se duniya badalte hain"</p>
+      <button class="door-btn" onclick="goToScreen(3)">Click here to Open the Door</button>
+    </div>
+  </div>
+
+  <!-- ========== SCREEN 3: Profile Card ========== -->
+  <div id="screen3" class="screen">
+    <div class="profile-wrapper">
+      <p class="profile-quote">"Silence is my power,<br><span>Code is my language</span> 🔥"</p>
+      
+      <div class="profile-card">
+        <div class="avatar-ring">
+          <img src="inspire-logo.jpg" alt="INSPIRE" class="avatar-img">
+        </div>
+        
+        <h2 class="profile-name">INSPIRE</h2>
+        <p class="profile-handle">@INSPIRE</p>
+        
+        <p class="profile-bio">
+          💻 Telegram Bot Developer | Python | Pyrogram<br>
+          ⚡ Building automation with creativity
+        </p>
+        
+        <div class="stats">
+          <span class="stat">👁️ 2 Views</span>
+          <span class="stat">❤️ 1 Likes</span>
+        </div>
+        
+        <div class="social-row">
+          <a href="#" class="social whatsapp">🟢</a>
+          <a href="#" class="social telegram">🔵</a>
+          <a href="#" class="social link">🔗</a>
+        </div>
+        
+        <div class="social-icons">
+          <a href="#">🐙</a>
+          <a href="#">✈️</a>
+          <a href="#">📸</a>
+          <a href="#">📘</a>
+          <a href="#">✉️</a>
+          <a href="#">📞</a>
+        </div>
+        
+        <div class="action-btns">
+          <button class="follow-btn">Follow</button>
+          <button class="next-btn" onclick="goToScreen(1)">Next →</button>
+        </div>
+      </div>
+      
+      <div class="page-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
