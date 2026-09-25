@@ -1,46 +1,25 @@
-// ===== Create Stars (Universe) =====
-const starsContainer = document.getElementById("stars");
-for (let i = 0; i < 120; i++) {
-  const star = document.createElement("div");
-  star.className = "star";
-  const size = Math.random() * 2.5 + 0.5;
-  star.style.width = size + "px";
-  star.style.height = size + "px";
-  star.style.left = Math.random() * 100 + "%";
-  star.style.top = Math.random() * 100 + "%";
-  star.style.setProperty("--dur", (Math.random() * 3 + 2) + "s");
-  star.style.animationDelay = Math.random() * 5 + "s";
-  starsContainer.appendChild(star);
+// Stars
+const sc = document.getElementById("stars");
+for (let i = 0; i < 90; i++) {
+  const s = document.createElement("div");
+  s.className = "star";
+  const sz = Math.random() * 2 + 0.4;
+  s.style.cssText = `width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--d:${(Math.random()*3+2).toFixed(1)}s;animation-delay:${(Math.random()*4).toFixed(1)}s`;
+  sc.appendChild(s);
 }
 
-// ===== Heart Animation (smaller) =====
+// Heart
 const ui = document.getElementById("ui");
-const totalItems = 80;
-
-for (let i = 1; i <= totalItems; i++) {
-  const love = document.createElement("div");
-  love.className = "love";
-  love.style.setProperty("--i", i);
-
-  love.innerHTML = `
-    <div class="love_horizontal">
-      <div class="love_vertical">
-        <div class="love_word">I love you</div>
-      </div>
-    </div>
-  `;
-
-  ui.appendChild(love);
+for (let i = 1; i <= 85; i++) {
+  const d = document.createElement("div");
+  d.className = "love";
+  d.style.setProperty("--i", i);
+  d.innerHTML = `<div class="love_horizontal"><div class="love_vertical"><div class="love_word">I love you</div></div></div>`;
+  ui.appendChild(d);
 }
 
-// ===== Screen Navigation =====
-function goToScreen(num) {
-  document.querySelectorAll(".screen").forEach(screen => {
-    screen.classList.remove("active");
-  });
-
-  const target = document.getElementById("screen" + num);
-  if (target) {
-    target.classList.add("active");
-  }
+// Nav
+function goToScreen(n) {
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+  document.getElementById("screen" + n).classList.add("active");
 }
