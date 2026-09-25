@@ -1,3 +1,4 @@
+// ===== Heart Animation =====
 const ui = document.getElementById("ui");
 const totalItems = 100;
 
@@ -15,4 +16,16 @@ for (let i = 1; i <= totalItems; i++) {
   `;
 
   ui.appendChild(love);
+}
+
+// ===== Screen Navigation =====
+function goToScreen(num) {
+  document.querySelectorAll(".screen").forEach(screen => {
+    screen.classList.remove("active");
+  });
+
+  const target = document.getElementById("screen" + num);
+  if (target) {
+    target.classList.add("active");
+  }
 }
